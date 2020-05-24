@@ -10,6 +10,27 @@
 
 #include <JuceHeader.h>
 
+struct Pig
+{
+    struct PigsEar
+    {
+        bool earIsFloppy;
+    };
+    
+    int roundness;
+    int width;
+    float snoutLength;
+    PigsEar leftEar;
+    PigsEar rightEar;
+    
+    
+    bool strokeOtherEar( PigsEar previousEar, PigsEar newEar );
+    
+    void beFriendly( int  lovelinessFactor, bool smellsTastyPie);
+    void trot( int howFar, int howFast);
+};
+
+
 //==============================================================================
 /*
     This component lives inside our window, and this is where you should put all
